@@ -1,23 +1,23 @@
 import java.util.Arrays;
 public class Sorts{
+
   public static void bubbleSort(int[] data) {
+
+    int length = data.length;
+
     for (int i = 0; i < data.length; i++) {
-      int comp = data[i];
-      for (int j = i; j < data.length - 1; j++) {
-        System.out.println(Arrays.toString(data));
-        if (comp > data [j + 1]) {
-          int next = data[j + 1];
-          data[j + 1] = data[i];
-          data[i] = next;
-          /*
-          int moving = data[j + 1];
-          data[j + 1] = data[i];
-          System.out.println(Arrays.toString(data));
-          data[i] = moving;
-          System.out.println(Arrays.toString(data));
-          */
+
+      for (int j = 0; j < length - 1; j++) {
+
+        int comp = data[j];
+        int compNext = data[j + 1];
+
+        if (comp > compNext) {
+          data[j] = compNext;
+          data[j + 1] = comp;
         }
       }
+      length--;
     }
   }
 }
