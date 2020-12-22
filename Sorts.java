@@ -20,4 +20,32 @@ public class Sorts{
       length--;
     }
   }
+
+  public static void selectionSort (int[] data) {
+
+    int datalength = data.length;
+
+    for (int j = 0; j < datalength; j++) {
+
+      int smallest = data[j];
+      int smallestIndex = j;
+
+      int testerVal = data[j];
+
+      for (int i = j + 1; i < data.length; i++) {
+        if (data[i] < smallest) {
+          smallest = data[i];
+          smallestIndex = i;
+        }
+      }
+      System.out.println(Arrays.toString(data));
+      data[j] = smallest;
+      data[smallestIndex] = testerVal;
+      System.out.println(Arrays.toString(data));
+      System.out.println();
+
+      datalength--;
+    }
+  }
+
 }
